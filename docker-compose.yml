@@ -1,0 +1,35 @@
+version: "3"
+services:
+
+  html:
+    build: .
+    image: lomztein/opn-html
+    ports:
+     - "80:80"
+    networks:
+     - frontend
+    depends_on:
+     - backend
+
+  backend:
+    build: backend/
+    image: lomztein/opn-backend
+    container_name: backend
+    depends_on:
+     - database
+    networks:
+     - frontend
+     - backend
+
+  database:
+    build: sql/
+    image: lomztein/opn-database
+    container_name: database
+    networks:
+     - backend
+  
+networks:
+
+  frontend:
+
+  backend:
