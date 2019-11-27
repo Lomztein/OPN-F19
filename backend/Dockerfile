@@ -13,4 +13,4 @@ RUN pip3 install mysql-connector
 
 EXPOSE 5000
 
-ENTRYPOINT FLASK_APP=person.py flask run --port 5000
+ENTRYPOINT python3 person.py
