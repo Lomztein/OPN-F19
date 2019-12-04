@@ -40,7 +40,7 @@ def insert ():
 		firstname = request.form.get('firstname')
 		lastname = request.form.get('lastname')
 		cn = connect ()
-		cursor = cn.cursor().execute ("INSERT INTO persons (Firstname, Lastname) VALUES (\'" + firstname + "\', \'" + lastname + " \')")
+		cursor = cn.cursor().execute ("INSERT INTO persons (Firstname, Lastname) VALUES (\'" + firstname + "\', \'" + lastname + "\')")
 		cn.commit ()
 		cn.close ()
 		return "Person succesfully entered into database."
