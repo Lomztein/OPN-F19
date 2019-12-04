@@ -1,7 +1,5 @@
 FROM mysql
 
-ENV MYSQL_ROOT_PASSWORD = mysql
+ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
 
-EXPOSE 3306
-
-COPY init.sql /docker-entrypoint-init.d/
+COPY init.sql /docker-entrypoint-initdb.d/

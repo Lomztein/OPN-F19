@@ -1,12 +1,8 @@
-CREATE DATABASE 'opn';
-USE 'opn';
+CREATE DATABASE opn;
+USE opn;
 
-CREATE TABLE 'persons' (
-	'PersonID' INTEGER AUTO_INCREMENT,
-	'Firstname' text,
-	'Lastname' text,
-	PRIMARY_KEY (PersonID)
+CREATE TABLE persons (
+	PersonID int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	Firstname varchar (255),
+	Lastname varchar (255)
 );
-
-INSERT INTO persons VALUES ("John", "Smith");
-INSERT INTO persons VALUES ("Jane", "Doe");

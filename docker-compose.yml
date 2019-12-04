@@ -5,7 +5,7 @@ services:
     build: .
     image: lomztein/opn-html
     ports:
-     - "6969:80"
+     - "443:443"
     networks:
      - frontend
     depends_on:
